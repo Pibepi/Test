@@ -1,0 +1,96 @@
+.recruitment-strategy {
+  padding: 100px 0;
+  background-color: #151515;
+  text-align: center;
+  color: #fff;
+
+  h2 {
+    margin-bottom: 50px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 28px;
+    }
+  }
+
+  .recruitment-strategy__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .recruitment-strategy__text {
+    margin-right: 124px;
+    width: 495px;
+    height: 373px;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: auto;
+      
+      li {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #d9d5d5;
+        text-align: start;
+        height: 34px;
+        position: relative;
+        padding-left: 15px; /* Відступ для тире */
+
+        &::before {
+          content: "-";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-100%);
+          color: #fff; /* Колір тире */
+          
+        }
+
+        @media (max-width: 768px) {
+          text-align: left;
+          
+        }
+      }
+    }
+  }
+
+  .recruitment-strategy__image {
+    img {
+      width: 261px;
+      height: 373px;
+
+      @media (max-width: 768px) {
+        width: 200px;
+        height: auto;
+        margin-top: 20px;
+      }
+    }
+  }
+}

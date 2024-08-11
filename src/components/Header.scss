@@ -1,0 +1,472 @@
+$primary-color: #ff8a00;
+$secondary-color: #e68a00;
+$text-color: #fff;
+$font-family: "Raleway", sans-serif;
+
+html {
+  font-size: 16px;
+}
+
+.header {
+  position: relative;
+  background: url('../assets/images/map.svg') no-repeat center center;
+  background-size: cover;
+  color: $text-color;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+
+  p {
+    padding-top: 0.75rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 1);
+    z-index: -1;
+  }
+
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+
+    @media (min-width: 768px) {
+      padding: 1.2rem 4rem;
+    }
+
+    @media (min-width: 1281px) {
+      padding: 1.2rem 12.5rem;
+    }
+
+    @media (min-width: 1600px) {
+      padding: 1.2rem 15.625rem;
+    }
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      @media (min-width: 768px) {
+        width: 3.0625rem;
+        height: 3.0625rem;
+      }
+    }
+
+    p {
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 1.125rem;
+      line-height: 1.4;
+      color: $text-color;
+      margin-left: 0.5rem;
+      margin-right: 0.8rem;
+
+      @media (min-width: 768px) {
+        font-size: 1.375rem;
+      }
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.2rem 0;
+    position: relative;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: rgba(28, 28, 28, 0.95);
+      padding: 0;
+      display: none;
+    }
+
+    @media (min-width: 1281px) {
+      max-width: 55rem;
+    }
+
+    .header__more-clients{
+
+text-align: center;
+    }
+
+
+    .header__nav-left {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        margin-right: 1.25rem;
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 0.6875rem;
+        line-height: 1.4;
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.3s;
+        text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        text-transform: uppercase;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 0.75rem;
+        }
+      
+      }
+    }
+
+    .header__nav-right {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          font-family: $font-family;
+          font-weight: 400;
+          font-size: 0.75rem;
+          line-height: 1.4;
+          color: $text-color;
+          width: 8.25rem;
+        }
+
+        button {
+          background: $primary-color;
+          border-radius: 1.375rem;
+          width: 12.125rem;
+          height: 2.5625rem;
+          font-family: $font-family;
+          font-weight: 700;
+          font-size: 0.75rem;
+          line-height: 1.4;
+          text-transform: uppercase;
+          color: $text-color;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .header__burger-toggle {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: none;
+      &:checked ~ .header__nav {
+        display: flex;
+      }
+    }
+  }
+
+  .header__burger {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      position: absolute;
+      right: 2rem;
+      top: 1.5rem;
+    }
+
+    .header__burger-icon {
+      width: 100%;
+      height: 0.25rem;
+      background-color: $text-color;
+      border-radius: 5px;
+    }
+  }
+
+  .header__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.125rem 2rem;
+    position: relative;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 6.25rem 4rem;
+    }
+
+    @media (min-width: 1281px) {
+      padding: 6.25rem 12.5rem;
+    }
+
+    @media (min-width: 1600px) {
+      padding: 7.5rem 15.625rem;
+    }
+  }
+
+  .header__main-left {
+    max-width: 100%;
+
+    h1 {
+      font-family: $font-family;
+      font-weight: 800;
+      font-size: 2rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: $text-color;
+
+      @media (min-width: 768px) {
+        font-size: 2.025rem;
+      }
+
+      @media (min-width: 1281px) {
+        font-size: 3rem;
+      }
+
+      @media (min-width: 1600px) {
+        font-size: 3.375rem;
+      }
+    }
+    
+
+    p {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.2;
+      color: #d9d5d5;
+      max-width: 100%;
+      margin-top: 1rem;
+
+      @media (min-width: 768px) {
+        max-width: 23.125rem;
+      }
+
+      @media (min-width: 1281px) {
+        font-size: 1.125rem;
+      }
+
+      @media (min-width: 1600px) {
+        font-size: 1.25rem;
+        
+        
+      }
+    }
+
+    .header__clients {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      .frame {
+        width: 8rem;
+        height: 1.5rem;
+
+        @media (min-width: 768px) {
+          width: 9.9375rem;
+          height: 2rem;
+        }
+      }
+
+      .frame21 {
+        padding-left: 0.625rem;
+      }
+
+      .header__more-clients {
+        font-size: 1rem;
+        color: $primary-color;
+        margin-left: 0.625rem;
+
+        @media (min-width: 1281px) {
+          font-size: 1.125rem;
+        }
+        
+      }
+    }
+  }
+
+  .header__main-right {
+    .my-masonry-grid {
+      display: flex;
+      margin-left: -0.9375rem; /* gutter size offset */
+      width: auto;
+
+      @media (min-width: 768px) {
+        margin-left: -0.9375rem;
+      }
+
+      @media (min-width: 1281px) {
+        margin-left: -0.625rem;
+      }
+
+      @media (min-width: 1600px) {
+        margin-left: -0.75rem;
+      }
+    }
+
+    .my-masonry-grid_column {
+      padding-left: 0.9375rem; /* gutter size */
+      background-clip: padding-box;
+
+      @media (min-width: 768px) {
+        padding-left: 0.9375rem;
+      }
+
+      @media (min-width: 1281px) {
+        padding-left: 0.625rem;
+      }
+
+      @media (min-width: 1600px) {
+        padding-left: 0.75rem;
+        
+      }
+    }
+
+    .my-masonry-grid_column > .card {
+      margin-bottom: 0.9375rem; /* gutter size */
+    }
+
+
+
+    .cardGR {
+     
+      color: $text-color;
+      border-radius: 0.625rem;
+      padding: 0.25rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+      opacity: 0.9;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-0.5rem) scale(1.05);
+        opacity: 1;
+      }
+    }
+
+    .emilia-card,
+    .mark-card,
+    .alice-card,
+    .card-new {
+      width: 100%;
+      height: auto;
+
+      @media (max-width: 768px) {
+     display: none;
+      }
+      @media (min-width: 768px) {
+        width: auto;
+        height: auto;
+      }
+
+      @media (min-width: 1281px) {
+        width: auto;
+        height: auto;
+      }
+
+      @media (min-width: 1600px) {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .emilia-card {
+      position: relative;
+      top: 1.5rem;
+
+      @media (min-width: 768px) {
+        top: 0rem;
+      }
+      @media (min-width: 1281px) {
+        top: 0rem;
+      }
+
+      @media (min-width: 1600px) {
+        top: 0rem;
+      }
+    }
+
+    .mark-card {
+      position: relative;
+      top: 1.5rem;
+
+      @media (min-width: 768px) {
+        top:  -0.5rem
+      }
+
+      @media (min-width: 1281px) {
+        top:  -0.5rem
+      }
+
+      @media (min-width: 1600px) {
+        top:  -0.5rem
+      }
+    }
+
+    .card-new {
+      position: relative;
+      top: 1.5rem;
+
+      @media (min-width: 768px) {
+        top:-3.5rem;
+        right: 1.5rem
+      }
+
+      @media (min-width: 1281px) {
+        top:-3.5rem;
+        right: 1.5rem
+      }
+
+      @media (min-width: 1600px) {
+        top:-3.5rem;
+        right: 1.5rem
+      }
+    }
+
+    .alice-card {
+      position: relative;
+      top: 1.5rem;
+
+      @media (min-width: 768px) {
+        top: -4rem;
+        right: 1.5rem
+      }
+
+      @media (min-width: 1281px) {
+        top: -4rem;
+        right: 1.5rem
+      }
+
+      @media (min-width: 1600px) {
+        top: -4rem;
+        right: 1.5rem
+        
+      }
+    }
+  }
+}

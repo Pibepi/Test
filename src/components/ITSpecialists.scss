@@ -1,0 +1,202 @@
+.it-specialists {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  background-color: #151515;
+  background-size: cover;
+
+  .contSp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-bottom: 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding-left: 5%;
+    }
+
+    @media (max-width: 576px) {
+      padding-left: 2%;
+    }
+  }
+
+  .SELECTION1 {
+    text-align: start;
+    margin-bottom: 20px;
+
+    h6 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #ff8a00;
+    }
+
+    h3 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #fff;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      padding-top: 15px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.2;
+      color: #d9d5d5;
+
+      @media (max-width: 576px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .tools {
+    text-align: start;
+
+    h6 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #ff8a00;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding-top: 10px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #d9d5d5;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .statistics {
+    padding: 0;
+    z-index: 1;
+    position: relative;
+
+    .someCards {
+      z-index: 10;
+      position: relative;
+      top: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+
+      @media (min-width: 1106px) {
+        width: auto;
+        text-align: center;
+      }
+
+      img {
+        border-radius: 10%;
+        backdrop-filter: blur(10px);
+        max-width: 100%;
+
+        @media (max-width: 768px) {
+          width: 70%; /* Збільшуємо ширину карток на мобільних пристроях */
+        }
+
+        @media (max-width: 576px) {
+          width: 50%; /* Ще більше збільшуємо на дуже малих екранах */
+        }
+
+
+        @media (min-width: 1106px) {
+          width: 100%; /* Забезпечуємо адаптивність на великих екранах */
+        }
+      }
+    }
+
+    .stat-item2 {
+      padding-top: 20px;
+
+      @media (max-width: 576px) {
+        padding-top: 40px;
+      }
+    }
+  }
+
+  .Group24 {
+    position: relative;
+    padding-bottom: 600px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 700px; /* Зменшуємо відступ на мобільних */
+    }
+
+    .Group24Img {
+      position: absolute;
+      top: -150px;
+      left: 25%;
+      z-index: 1;
+
+      @media (max-width: 1168px) {
+        top: -140px;
+        left: 15%;
+      }
+
+      @media (max-width: 968px) {
+        top: -140px;
+        left: 5%;
+      }
+
+      @media (max-width: 768px) {
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @media (max-width: 576px) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @media (max-width: 476px) {
+        width: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      img {
+        width: 100%;
+
+        @media (max-width: 768px) {
+          width: 120%;
+        }
+      }
+    }
+  }
+}

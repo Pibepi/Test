@@ -1,0 +1,42 @@
+.team-section {
+  padding: 0;
+  background-color: #151515;
+
+  .parallax-container {
+  
+    width: auto;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .react-parallax {
+    position: relative;
+  }
+
+  .react-parallax-bgimage {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    text-align: center;
+    color: #fff;
+    padding-top: 200px;
+    font-size: 36px; /* Задаємо базовий розмір шрифту */
+
+    @media (max-width: 768px) {
+      font-size: 28px; /* Зменшуємо розмір шрифту на середніх екранах */
+      padding-top: 150px; /* Зменшуємо верхній відступ */
+    }
+
+    @media (max-width: 576px) {
+      font-size: 24px; /* Зменшуємо розмір шрифту на малих екранах */
+      padding-top: 100px; /* Ще більше зменшуємо верхній відступ */
+    }
+
+    @media (max-width: 400px) {
+      font-size: 20px; /* Ще більше зменшуємо розмір шрифту на дуже малих екранах */
+      padding-top: 80px; /* Мінімізуємо верхній відступ */
+    }
+  }
+}

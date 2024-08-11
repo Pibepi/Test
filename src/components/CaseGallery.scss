@@ -1,0 +1,561 @@
+/* Глобальне скидання для правильного відображення розмірів */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Додаткові стилі для тексту */
+.text-block {
+  position: absolute;
+  color: white;
+  text-align: left;
+}
+
+.text-block--top {
+  top: -27%;
+  right: 19%;
+}
+
+.text-block--bottom {
+  bottom: 35%;
+  right: 60%;
+}
+
+.text-smm {
+  color: #ff6f00;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.text-cases {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.text-description {
+  font-size: 14px;
+  margin-top: 8px;
+  width: 60%;
+}
+
+/* Адаптивні стилі для текстових блоків */
+
+@media (max-width: 1320px) {
+  .text-block--top {
+    right: 5%;
+  }
+
+  .text-cases {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .text-block--top {
+    right: -5%;
+  }
+
+  .text-cases {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .text-block--top {
+    right: -5%;
+  }
+
+  .text-cases {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 898px) {
+  .text-block--top {
+    right: -10%;
+  }
+
+  .text-cases {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 808px) {
+  .text-block--top {
+    right: -17%;
+    margin-right: 10px;
+    margin-left: 30px;
+  }
+
+  .text-block--bottom {
+    margin-right: 10px;
+    margin-left: 30px;
+    top: 40%;
+    right: 52%;
+  }
+}
+
+@media (max-width: 708px) {
+  .text-block--top {
+    right: -22%;
+    width: 50%;
+    top: 0%;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 608px) {
+  .text-block--top {
+    top: -20%;
+    right: -24%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-block--top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    margin-top: 100px;
+  }
+
+
+  .text-block--bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    padding: auto;
+    height: 50px;
+    
+    
+  }
+
+  .text-cases {
+    
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .text-block--top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    margin-top: 100px;
+  }
+
+  .text-block--bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    padding: auto;
+    height: 50px;
+    
+    
+  }
+
+  .text-cases {
+    
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+}
+
+/* Основні стилі для галереї */
+.case-gallery-container {
+  padding: 100px 0;
+  background-color: #151515;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.case-gallery {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.case-gallery__item {
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.case-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-gallery__item1,
+.case-gallery__item2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.selected-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.selected-image-overlay img {
+  width: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10%;
+}
+
+/* Адаптивність для менших екранів */
+@media (max-width: 1280px) {
+  .case-gallery-container {
+    padding: 80px 0;
+  }
+
+  .case-gallery__item {
+    margin: 80px;
+  }
+
+  .selected-image-overlay img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .case-gallery-container {
+    padding: 70px 0;
+  }
+
+  .case-gallery__item img {
+    width: 85%;
+  }
+
+  .selected-image-overlay img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-gallery-container {
+    padding: 60px 0;
+  }
+
+  .case-gallery__item img {
+    width: 80%;
+  }
+
+  .selected-image-overlay img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .case-gallery-container {
+    padding: 50px 0;
+  }
+
+  .case-gallery__item img {
+    width: 75%;
+  }
+
+  .selected-image-overlay img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 400px) {
+  .case-gallery-container {
+    padding: 40px 0;
+  }
+
+  .case-gallery__item img {
+    width: 70%;
+  }
+
+  .selected-image-overlay img {
+    width: 150px;
+  }
+}
+
+/* Специфічні стилі для кожного телефону */
+.phone1, .phone2, .phone3, .phone4, .phone5, .phone6 {
+  position: absolute;
+  width: 160px;
+}
+
+.phone1 {
+  top: -7%;
+  left: 21%;
+}
+
+.phone2 {
+  top: -23%;
+  left: 33%;
+}
+
+.phone3 {
+  top: -35%;
+  left: 45%;
+}
+
+.phone4 {
+  top: 27%;
+  left: 43%;
+}
+
+.phone5 {
+  top: 39%;
+  left: 55%;
+}
+
+.phone6 {
+  top: 49%;
+  left: 67%;
+}
+
+/* Адаптивні стилі для телефонів */
+@media (max-width: 1280px) {
+  .phone1 {
+    top: -20%;
+    left: 18%;
+    width: 140px;
+  }
+  .phone2 {
+    top: -30%;
+    left: 33%;
+    width: 140px;
+  }
+  .phone3 {
+    top: -40%;
+    left: 48%;
+    width: 140px;
+  }
+  .phone4 {
+    top: 20%;
+    left: 35%;
+    width: 140px;
+  }
+  .phone5 {
+    top: 30%;
+    left: 50%;
+    width: 140px;
+  }
+  .phone6 {
+    top: 40%;
+    left: 65%;
+    width: 140px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .phone1, .phone2, .phone3, .phone4, .phone5, .phone6 {
+    width: 120px;
+  }
+
+  .phone1 {
+    top: -20%;
+    left: 18%;
+  }
+  .phone2 {
+    top: -30%;
+    left: 33%;
+  }
+  .phone3 {
+    top: -40%;
+    left: 48%;
+  }
+  .phone4 {
+    top: 20%;
+    left: 35%;
+  }
+  .phone5 {
+    top: 30%;
+    left: 50%;
+  }
+  .phone6 {
+    top: 40%;
+    left: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .phone1 {
+    top: -20%;
+    left: 18%;
+  }
+  .phone2 {
+    top: -30%;
+    left: 33%;
+  }
+  .phone3 {
+    top: -40%;
+    left: 48%;
+  }
+  .phone4 {
+    top: 20%;
+    left: 30%;
+  }
+  .phone5 {
+    top: 30%;
+    left: 45%;
+  }
+  .phone6 {
+    top: 40%;
+    left: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .case-gallery__item2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+  padding-bottom: 100px
+  }
+
+  .case-gallery__item1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    margin-top: 100px;
+    padding-bottom: 100px
+  }
+  
+
+  .phone1 {
+    top: 10%;
+    left: 18%;
+  }
+  .phone2 {
+    top: 0%;
+    left: 33%;
+  }
+  .phone3 {
+    top: 15%;
+    left: 44%;
+  }
+  .phone4 {
+    top: 60%;
+    left: 10%;
+  }
+  .phone5 {
+    top: 55%;
+    left: 25%;
+  }
+  .phone6 {
+    top: 65%;
+    left: 40%;
+  }
+}
+
+@media (max-width: 400px) {
+  .case-gallery__item2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+  padding-bottom: 100px
+  }
+
+  .case-gallery__item1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    margin-top: 100px;
+    padding-bottom: 100px
+  }
+  
+
+  .phone1 {
+    top: 10%;
+    left: 18%;
+  }
+  .phone2 {
+    top: 0%;
+    left: 33%;
+  }
+  .phone3 {
+    top: 15%;
+    left: 44%;
+  }
+  .phone4 {
+    top: 60%;
+    left: 10%;
+  }
+  .phone5 {
+    top: 55%;
+    left: 25%;
+  }
+  .phone6 {
+    top: 65%;
+    left: 40%;
+  }
+}
+
+/* Стилі для піднятих телефонів */
+.phone1.active,
+.phone2.active,
+.phone3.active,
+.phone4.active,
+.phone5.active,
+.phone6.active {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
