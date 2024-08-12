@@ -8,6 +8,9 @@
     position: relative;
     flex-wrap: wrap;
 
+    
+
+
     .item {
         margin-bottom: 400px;
         margin-top: 400px;
@@ -533,7 +536,7 @@
         .Circle3 {
             position: absolute;
             bottom: 220%;
-            left: 0%;
+            left: -40%;
             transform: translate(10%, 10%);
             z-index: 4;
         }

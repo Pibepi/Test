@@ -5,8 +5,8 @@
     text-align: center;
     color: #fff;
     background-color: #151515;
-    
 
+    
     .TopHeader {
         display: flex;
         justify-content: space-between;
@@ -14,7 +14,6 @@
         max-width: 812px;
         margin: 0 auto 50px;
         
-
         @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
@@ -56,11 +55,6 @@
         @media (max-width: 768px) {
             text-align: center;
             margin-bottom: 20px;
-
-
-
-
-
         }
 
         ul {
@@ -90,9 +84,15 @@
             padding: 0;
             max-width: 253px;
             margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
 
             @media (max-width: 768px) {
-                max-width: 100%;
+                width: 140%;
                 margin-bottom: 20px;
             }
 
@@ -159,7 +159,7 @@
         @media (max-width: 576px) {
             .stat-item3 img, .stat-item4 img { display: none; }
             .stat-item2 img { left:  -150px; top: 80px; z-index: 2; }
-            .stat-item1 img { left: 220px; top: 30px; z-index: 1; }
+            .stat-item1 img { left: 120px; top: 30px; z-index: 1; }
         }
     }
 }

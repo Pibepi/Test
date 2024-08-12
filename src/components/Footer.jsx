@@ -27,7 +27,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="clients">
-                <ul className="d-flex flex-wrap justify-content-center list-unstyled">
+                <ul className="d-flex flex-wrap justify-content-center list-unstyled  " >
                     <li className="mx-3 my-2"><img src={client1} alt="Client 1" /></li>
                     <li className="mx-3 my-2"><img src={client2} alt="Client 2" /></li>
                     <li className="mx-3 my-2"><img src={client3} alt="Client 3" /></li>
@@ -50,7 +50,7 @@ const Footer = () => {
                     <li className="mx-3 my-2"><img src={client20} alt="Client 20" /></li>
                 </ul>
             </div>
-            <div className="footer-content d-flex justify-content-between align-items-center">
+            <div className="footer-content d-flex justify-content-between align-items-center container">
                 <div className="company-info d-flex flex-column">
                     <div className="company-info1 d-flex align-items-center">
                         <img src={logo} alt="SkillHunter" className="logo" />

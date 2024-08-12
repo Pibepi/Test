@@ -3,8 +3,8 @@ import './EvaluationSection.scss';
 
 const EvaluationSection = () => {
   return (
-    <section className="evaluation-section">
-      <div className="content-container">
+    <section className="evaluation-section  ">
+      <div className="content-container container">
         <p>EXPERT EVALUATION OF THE EFFECTIVENESS OF TRAINING SYSTEMS.</p>
         <p>SYSTEMS FOR MANAGING THE GROWTH OF EMPLOYEE QUALIFICATIONS.</p>
         <p>THE BEST SYSTEMS OF TRAINING AND SUPPORT OF PERSONNEL.</p>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './CaseGallery.scss'; // Стилі для компонента
+import { RemoveScroll } from 'react-remove-scroll';
 
 import phone1 from '../assets/images6/phone1.png';
 import phone2 from '../assets/images6/phone2.png';
@@ -29,7 +30,7 @@ const CaseGallery = () => {
   };
 
   return (
-    <div className="case-gallery-container">
+    <div className="case-gallery-container ">
       <div className="case-gallery">
         <div className="case-gallery__item1">
           <img src={case1} alt="Case 1" className='Case1' />

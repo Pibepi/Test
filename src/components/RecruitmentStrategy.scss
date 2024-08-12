@@ -1,5 +1,5 @@
 .recruitment-strategy {
-  padding: 100px 0;
+  padding:  0;
   background-color: #151515;
   text-align: center;
   color: #fff;
@@ -83,11 +83,11 @@
 
   .recruitment-strategy__image {
     img {
-      width: 261px;
-      height: 373px;
+      width: 461px;
+      height: 473px;
 
       @media (max-width: 768px) {
-        width: 200px;
+        width: 300px;
         height: auto;
         margin-top: 20px;
       }

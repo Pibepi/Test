@@ -9,7 +9,7 @@ import arrow2 from '../assets/images10/Arrow 2 (Stroke).svg';
 
 const ExperienceSection = () => {
   return (
-    <div className="experience-section">
+    <div className="experience-section ">
         <h6 className='Text1'>TIME-TESTED EXPERIENCE</h6>
         <h2 className='Text0'>COMMUNITY OF EXPERTS</h2>
       <div className="item">      
@@ -19,7 +19,7 @@ const ExperienceSection = () => {
         </div>
       </div>
 
-      <div className="arrow-icon arrow1">
+      <div className="arrow-icon arrow1 ">
         <img src={arrow1} alt="Arrow Icon 1"className='.img-fluid' />
       </div>
 

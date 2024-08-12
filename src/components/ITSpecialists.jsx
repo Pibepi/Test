@@ -8,7 +8,8 @@ import Group24 from '../assets/images7/Group 24.svg';
 
 const ITSpecialists = () => {
   return (
-    <div className="it-specialists container-fluid">
+    <div className="it-specialists ">
+      <div className=''>
       <div className="row justify-content-center contSp">
         <div className="col-12 col-md-6 col-lg-5 SELECTION1">
           <h6>CASE</h6>
@@ -44,6 +45,7 @@ const ITSpecialists = () => {
           <img src={Group24} alt="Group 24" className=" Group24Img" />
         </div>
       </div>
+    </div>
     </div>
   );
 };
